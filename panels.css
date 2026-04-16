@@ -1,0 +1,125 @@
+/* ============================================================
+   NEURAL CV — Panel Content Templates
+   Injected dynamically by world.js
+   ============================================================ */
+
+/* Extended styles for rich panel content */
+
+/* Timeline component */
+.timeline { position:relative; padding-left: 24px; margin-top: 12px; }
+.timeline::before {
+  content:'';
+  position:absolute; left:8px; top:0; bottom:0;
+  width:2px;
+  background: linear-gradient(180deg, var(--c-primary), var(--c-secondary), transparent);
+}
+.tl-item { position:relative; margin-bottom: 18px; }
+.tl-dot {
+  position:absolute; left:-24px; top:4px;
+  width:10px; height:10px; border-radius:50%;
+  background: var(--c-primary);
+  box-shadow: var(--glow-cyan);
+}
+.tl-year {
+  font-family: var(--font-code); font-size:11px;
+  color: var(--c-accent); margin-bottom:3px;
+}
+.tl-title {
+  font-family: var(--font-head); font-size:13px;
+  color: var(--c-primary); margin-bottom:2px;
+}
+.tl-desc { font-size:12px; color: var(--c-text-dim); line-height:1.6; }
+
+/* Stat grid */
+.stat-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 10px; margin-top: 12px;
+}
+.stat-box {
+  background: rgba(0,240,255,0.04);
+  border: 1px solid var(--c-border);
+  border-radius: 8px; padding: 12px;
+  text-align: center;
+}
+.stat-value {
+  font-family: var(--font-head);
+  font-size: 24px; font-weight: 700;
+  color: var(--c-primary);
+  text-shadow: var(--glow-cyan);
+}
+.stat-label {
+  font-size: 11px; color: var(--c-text-dim);
+  margin-top: 4px; font-family: var(--font-code);
+}
+
+/* Book card */
+.book-card {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 12px;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: border-color 0.2s;
+}
+.book-card:hover { border-color: var(--c-secondary); }
+.book-cover {
+  width: 40px; height: 52px; border-radius: 4px;
+  display:flex; align-items:center; justify-content:center;
+  font-size: 22px; flex-shrink:0;
+}
+.book-cover.bg-cyan { background: rgba(0,240,255,0.15); }
+.book-cover.bg-purple { background: rgba(168,85,247,0.15); }
+.book-cover.bg-gold { background: rgba(240,165,0,0.15); }
+.book-info {}
+.book-title { font-family: var(--font-head); font-size:12px; color: var(--c-text); margin-bottom: 3px; }
+.book-author { font-size:11px; color: var(--c-text-dim); }
+.book-status {
+  display:inline-block; margin-top:4px;
+  font-family: var(--font-code); font-size:10px;
+  padding: 2px 8px; border-radius: 999px;
+}
+.status-read { background:rgba(57,255,20,0.1); color:var(--c-green); border:1px solid rgba(57,255,20,0.3); }
+.status-reading { background:rgba(0,240,255,0.1); color:var(--c-primary); border:1px solid rgba(0,240,255,0.3); }
+
+/* Floating orb skills (CSS art) */
+.orb-grid {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin-top: 14px; justify-content: center;
+}
+.orb {
+  width: 68px; height: 68px; border-radius: 50%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  cursor: pointer; position: relative;
+  border: 1px solid;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: orbFloat 3s ease-in-out infinite;
+}
+.orb:hover {
+  transform: scale(1.15) translateY(-4px);
+}
+.orb:nth-child(odd) { animation-delay: 0.5s; }
+.orb:nth-child(3n)  { animation-delay: 1s; }
+
+@keyframes orbFloat {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+.orb-cyan   { border-color:rgba(0,240,255,0.5); background:radial-gradient(circle at 35% 35%, rgba(0,240,255,0.3), rgba(0,240,255,0.05)); box-shadow: 0 0 16px rgba(0,240,255,0.25); }
+.orb-purple { border-color:rgba(168,85,247,0.5); background:radial-gradient(circle at 35% 35%, rgba(168,85,247,0.3), rgba(168,85,247,0.05)); box-shadow: 0 0 16px rgba(168,85,247,0.25); }
+.orb-gold   { border-color:rgba(240,165,0,0.5);  background:radial-gradient(circle at 35% 35%, rgba(240,165,0,0.3), rgba(240,165,0,0.05));  box-shadow: 0 0 16px rgba(240,165,0,0.25); }
+.orb-green  { border-color:rgba(57,255,20,0.5);  background:radial-gradient(circle at 35% 35%, rgba(57,255,20,0.3), rgba(57,255,20,0.05));  box-shadow: 0 0 16px rgba(57,255,20,0.25); }
+
+.orb-icon { font-size: 22px; }
+.orb-label { font-size: 9px; font-family:var(--font-code); color: var(--c-text); margin-top: 3px; }
+
+/* code-stream animation */
+.code-stream {
+  font-family: var(--font-code); font-size: 11px;
+  color: var(--c-green); background: rgba(0,0,0,0.4);
+  border-radius: 6px; padding: 10px 12px;
+  line-height: 1.8; margin-top: 10px;
+  overflow: hidden; white-space: pre-wrap;
+  border: 1px solid rgba(57,255,20,0.2);
+}
