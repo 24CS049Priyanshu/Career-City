@@ -11,7 +11,7 @@ import InfoPanel    from './ui/InfoPanel';
 import ModeSwitch   from './ui/ModeSwitch';
 import HUDTop       from './ui/HUDTop';
 import Minimap      from './ui/Minimap';
-import FreeJoystick from './ui/FreeJoystick';
+
 import useStore     from './store/useStore';
 import { nextStoryScene } from './story/storyRunner';
 
@@ -55,7 +55,7 @@ export default function App() {
           <DialogueBox />
           <InfoPanel />
           <Minimap />
-          <FreeJoystick />
+
         </>
       )}
 

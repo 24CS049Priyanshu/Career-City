@@ -1,5 +1,6 @@
 /**
  * scenes.js — 8 cinematic story scenes using Priyanshu's real CV
+ * Waypoints guaranteed to have clear line-of-sight preventing building collisions.
  */
 import { ZONES } from '../utils/constants';
 
@@ -20,7 +21,7 @@ export const SCENES = [
   },
   {
     id: 'skills',
-    target:     ZONES.skills.pos,
+    target:     [-20, 0, 8], 
     dialogue:   "🧠 Skills District: C & C++ with OOP, STL, file handling, dynamic memory. Java fundamentals. HTML5, CSS3, JavaScript for frontend. Data Structures, Algorithms, and core CS concepts.",
     speaker:    'Priyanshu',
     zoneFocus:  'skills',
@@ -28,14 +29,14 @@ export const SCENES = [
   },
   {
     id: 'iot',
-    target:     [-28, 0, -8],
+    target:     [-18, 0, -12],
     dialogue:   "🔌 IoT Tower: I built a Smart Attendance System using ESP32 + fingerprint sensor. It logs attendance to Google Sheets in real-time, supports subject selection, and backs up to Firebase.",
     speaker:    'Priyanshu',
     duration:   7000,
   },
   {
     id: 'projects',
-    target:     ZONES.projects.pos,
+    target:     [18, 0, -12],
     dialogue:   "🛠 Project Arena: My Digital Twin Storage PWA (React + FastAPI + Firebase), the ReWear hackathon platform, Tinkercad digital electronics circuits — Half Adder, ALU, Multiplexers.",
     speaker:    'Priyanshu',
     zoneFocus:  'projects',
@@ -43,14 +44,14 @@ export const SCENES = [
   },
   {
     id: 'hackathon',
-    target:     [42, 0, 8],
+    target:     [18, 0, 15],
     dialogue:   "🏆 Hackathon Quarter: Participated in the Tic Tac Hackathon, building the ReWear platform frontend — login/register flow, dashboard navigation, clean UI/UX with scalable module structure.",
     speaker:    'Priyanshu',
     duration:   6500,
   },
   {
     id: 'gate',
-    target:     ZONES.contact.pos,
+    target:     [0, 0, -28],
     dialogue:   "📚 GATE Prep Hub: Currently preparing for GATE CSE — mastering Computer Networks, Software Engineering (SDLC, CMM), Data Science basics, PDEs, and advanced C++ and system design.",
     speaker:    'Priyanshu',
     zoneFocus:  'contact',

@@ -22,23 +22,10 @@ export const BUILDING_COLLIDERS = [
   { minX: -11.0, maxX: 11.0, minZ: -49.0, maxZ: -31.0 },
   { minX: -13.5, maxX:  -9.0, minZ: -45.0, maxZ: -35.0 },
   { minX:   9.0, maxX:  13.5, minZ: -45.0, maxZ: -35.0 },
-
-  // Filler city blocks
-  { minX:  14.8, maxX:  21.2, minZ: -23.2, maxZ: -16.8 },
-  { minX: -21.7, maxX: -14.3, minZ: -22.7, maxZ: -17.3 },
-  { minX:  22.3, maxX:  27.7, minZ: -35.7, maxZ: -28.3 },
-  { minX: -28.2, maxX: -21.8, minZ: -35.2, maxZ: -28.8 },
-  { minX:  15.3, maxX:  20.7, minZ:  21.3, maxZ:  26.7 },
-  { minX: -22.2, maxX: -13.8, minZ:  21.3, maxZ:  26.7 },
-  { minX:  21.8, maxX:  28.2, minZ:  34.8, maxZ:  41.2 },
-  { minX: -27.7, maxX: -22.3, minZ:  33.8, maxZ:  42.2 },
-  { minX: -59.2, maxX: -50.8, minZ: -16.2, maxZ:  -7.8 },
-  { minX: -58.7, maxX: -51.3, minZ:   8.3, maxZ:  15.7 },
-  { minX:  50.8, maxX:  59.2, minZ: -16.2, maxZ:  -7.8 },
-  { minX:  51.3, maxX:  58.7, minZ:   8.3, maxZ:  15.7 },
 ];
 
-export const WORLD_LIMIT = 96;
+// Set strict world limit to stop player from walking into the instanced background ring
+export const WORLD_LIMIT = 63;
 
 export function isBlockedPosition(x, z, radius = 0.8) {
   for (const b of BUILDING_COLLIDERS) {
